@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neel Rana | BSc IT Student</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- MATRIX CANVAS BACKGROUND -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursor-trail"></div>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="bracket">[</span>NR<span class="bracket">]</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#github">GitHub</a></li>
+      <li><a href="#github-repos">Repos</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="https://www.linkedin.com/in/neel-rana-06357a39a/" target="_blank" class="nav-linkedin">
+      <i class="fab fa-linkedin-in"></i> LinkedIn
+    </a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#hero"         onclick="closeMobile()">Home</a></li>
+      <li><a href="#about"        onclick="closeMobile()">About</a></li>
+      <li><a href="#skills"       onclick="closeMobile()">Skills</a></li>
+      <li><a href="#projects"     onclick="closeMobile()">Projects</a></li>
+      <li><a href="#github"       onclick="closeMobile()">GitHub</a></li>
+      <li><a href="#github-repos" onclick="closeMobile()">Repos</a></li>
+      <li><a href="#contact"      onclick="closeMobile()">Contact</a></li>
+      <li><a href="https://www.linkedin.com/in/neel-rana-06357a39a/" target="_blank" class="mobile-linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+    </ul>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-content">
+
+      <!-- PROFILE PHOTO CIRCLE -->
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-ring">
+          <div class="hero-photo-circle">
+            <img src="profile.jpg" alt="Neel Rana"
+              onerror="this.style.display='none';document.getElementById('profile-fallback').style.display='flex'"/>
+            <div class="profile-fallback" id="profile-fallback">
+              <i class="fas fa-user-secret"></i>
+            </div>
+          </div>
+          <svg class="photo-ring-svg" viewBox="0 0 160 160">
+            <circle class="ring-track" cx="80" cy="80" r="72"/>
+            <circle class="ring-spin"  cx="80" cy="80" r="72"/>
+          </svg>
+        </div>
+        <div class="photo-status"><span class="dot"></span> Available for Internship</div>
+      </div>
+
+      <div class="hero-tag">&lt; hello world /&gt;</div>
+      <h1 class="hero-name">
+        <span class="glitch" data-text="Neel Rana">Neel Rana</span>
+      </h1>
+      <div class="hero-title">
+        <span class="typed-text" id="typed"></span><span class="cursor-blink">_</span>
+      </div>
+      <p class="hero-desc">
+        Driven by curiosity, fueled by code. I explore the intersection of
+        software development and digital security — building systems
+        that are not just functional, but <span class="accent">resilient</span>.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary"><i class="fas fa-terminal"></i> View Projects</a>
+        <a href="#contact"  class="btn-secondary"><i class="fas fa-satellite-dish"></i> Contact Me</a>
+        <a href="resume.pdf" download="Neel_Rana_Resume.pdf" class="btn-resume">
+          <i class="fas fa-file-arrow-down"></i> Download CV
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">9+</span><span class="stat-label">Languages</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Projects</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Passion</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hex-grid">
+        <div class="hex h1"><i class="fas fa-shield-halved"></i></div>
+        <div class="hex h2"><i class="fas fa-code"></i></div>
+        <div class="hex h3"><i class="fas fa-database"></i></div>
+        <div class="hex h4"><i class="fas fa-network-wired"></i></div>
+        <div class="hex h5"><i class="fas fa-bug"></i></div>
+        <div class="hex h6"><i class="fas fa-lock"></i></div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════ -->
+  <section id="about">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2>About <span class="accent">Me</span></h2>
+      <div class="header-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-avatar">
+        <div class="avatar-ring">
+          <div class="avatar-inner"><i class="fas fa-user-secret"></i></div>
+        </div>
+        <div class="status-badge"><span class="dot"></span> Available for Internship</div>
+      </div>
+      <div class="about-text">
+        <p class="about-intro">
+          Hey! I'm <span class="accent">Neel Rana</span>, a passionate BSc IT student
+          with a deep interest in cybersecurity, software engineering, and problem-solving.
+        </p>
+        <p>My journey began with C and C++, where I learned to think like a machine.
+          Today, I craft solutions across multiple languages and platforms — from
+          Python scripts to full web applications — always with security at the forefront of my mind.</p>
+        <p>I believe that in the digital age, <span class="accent">defense is as important as offense</span>.
+          I actively study ethical hacking, network security, and data protection
+          strategies to build a well-rounded understanding of the cyber landscape.</p>
+        <div class="about-cards">
+          <div class="info-card"><i class="fas fa-graduation-cap"></i><div><strong>Education</strong><span>BSc Information Technology</span></div></div>
+          <div class="info-card"><i class="fas fa-map-marker-alt"></i><div><strong>Location</strong><span>India</span></div></div>
+          <div class="info-card"><i class="fas fa-crosshairs"></i><div><strong>Focus</strong><span>Cybersecurity &amp; Dev</span></div></div>
+          <div class="info-card"><i class="fas fa-language"></i><div><strong>Languages</strong><span>English, Hindi, Gujarati</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SKILLS
+  ══════════════════════════════════════ -->
+  <section id="skills">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2>Tech <span class="accent">Skills</span></h2>
+      <div class="header-line"></div>
+    </div>
+    <div class="skills-container">
+      <div class="skills-col">
+        <h3 class="skills-cat"><i class="fas fa-code"></i> Programming Languages</h3>
+        <div class="skill-item"><div class="skill-label"><span>C</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
+        <div class="skill-item"><div class="skill-label"><span>C++</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" data-width="75"></div></div></div>
+        <div class="skill-item"><div class="skill-label"><span>C#</span><span class="skill-pct">65%</span></div><div class="skill-bar"><div class="skill-fill" data-width="65"></div></div></div>
+        <div class="skill-item"><div class="skill-label"><span>Python</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
+        <div class="skill-item"><div class="skill-label"><span>Java</span><span class="skill-pct">70%</span></div><div class="skill-bar"><div class="skill-fill" data-width="70"></div></div></div>
+      </div>
+      <div class="skills-col">
+        <h3 class="skills-cat"><i class="fas fa-globe"></i> Web &amp; Database</h3>
+        <div class="skill-item"><div class="skill-label"><span>JavaScript</span><span class="skill-pct">78%</span></div><div class="skill-bar"><div class="skill-fill" data-width="78"></div></div></div>
+        <div class="skill-item"><div class="skill-label"><span>SQL</span><span class="skill-pct">72%</span></div><div class="skill-bar"><div class="skill-fill" data-width="72"></div></div></div>
+        <div class="skill-item"><div class="skill-label"><span>Web Development</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
+        <h3 class="skills-cat" style="margin-top:2rem"><i class="fas fa-shield-halved"></i> Security</h3>
+        <div class="skill-item"><div class="skill-label"><span>Cybersecurity</span><span class="skill-pct">70%</span></div><div class="skill-bar"><div class="skill-fill" data-width="70"></div></div></div>
+      </div>
+    </div>
+    <div class="tech-tags">
+      <span>HTML5</span><span>CSS3</span><span>Git</span><span>Linux</span>
+      <span>Networking</span><span>Ethical Hacking</span><span>REST API</span>
+      <span>OOP</span><span>Data Structures</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       PROJECTS
+  ══════════════════════════════════════ -->
+  <section id="projects">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2>My <span class="accent">Projects</span></h2>
+      <div class="header-line"></div>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card featured">
+        <div class="card-glow"></div>
+        <div class="card-header"><span class="project-tag">Featured</span><i class="fas fa-folder-open"></i></div>
+        <h3 class="project-title">Medical Company Data Analytics Dashboard</h3>
+        <p class="project-desc">A comprehensive data analytics dashboard built for a medical company to visualize patient data, track KPIs, and generate actionable insights. Features real-time data updates, interactive charts, and secure role-based access control for healthcare professionals.</p>
+        <div class="project-tech"><span>Python</span><span>SQL</span><span>JavaScript</span><span>Data Viz</span><span>REST API</span></div>
+        <div class="project-links">
+          <a href="#" class="project-btn"><i class="fab fa-github"></i> Code</a>
+          <a href="#" class="project-btn primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="card-glow"></div>
+        <div class="card-header"><span class="project-tag">Security</span><i class="fas fa-folder-open"></i></div>
+        <h3 class="project-title">Network Vulnerability Scanner</h3>
+        <p class="project-desc">A Python-based tool that scans local network hosts for open ports, identifies services, and flags potential vulnerabilities using a CVE database lookup.</p>
+        <div class="project-tech"><span>Python</span><span>Networking</span><span>Cybersecurity</span></div>
+        <div class="project-links"><a href="#" class="project-btn"><i class="fab fa-github"></i> Code</a></div>
+      </div>
+      <div class="project-card">
+        <div class="card-glow"></div>
+        <div class="card-header"><span class="project-tag">Web Dev</span><i class="fas fa-folder-open"></i></div>
+        <h3 class="project-title">Secure Login System</h3>
+        <p class="project-desc">A full-stack authentication system with JWT tokens, bcrypt password hashing, 2FA support, and brute-force protection — built with security best practices.</p>
+        <div class="project-tech"><span>JavaScript</span><span>C#</span><span>SQL</span><span>Security</span></div>
+        <div class="project-links"><a href="#" class="project-btn"><i class="fab fa-github"></i> Code</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       GITHUB ACTIVITY
+  ══════════════════════════════════════ -->
+  <section id="github">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2>GitHub <span class="accent">Activity</span></h2>
+      <div class="header-line"></div>
+    </div>
+    <div class="github-container">
+      <div class="github-card">
+        <div class="github-avatar"><i class="fab fa-github"></i></div>
+        <div class="github-info">
+          <h3>Neel Rana</h3>
+          <p>@Neelrana12</p>
+          <p class="github-bio">BSc IT Student | Aspiring Cybersecurity Specialist | Open Source Enthusiast</p>
+        </div>
+        <a href="https://github.com/Neelrana12/Neelrana12" target="_blank" class="btn-primary github-btn">
+          <i class="fab fa-github"></i> View GitHub Profile
+        </a>
+      </div>
+      <div class="contribution-grid-container">
+        <p class="contribution-label">Contribution Activity</p>
+        <div class="contribution-grid" id="contribution-grid"></div>
+        <div class="grid-legend">
+          <span>Less</span>
+          <div class="legend-boxes">
+            <div class="lb l0"></div><div class="lb l1"></div>
+            <div class="lb l2"></div><div class="lb l3"></div><div class="lb l4"></div>
+          </div>
+          <span>More</span>
+        </div>
+      </div>
+      <div class="github-stats-row">
+        <div class="gh-stat-card"><i class="fas fa-star"></i><span class="gh-num" data-target="24">0</span><span>Stars Earned</span></div>
+        <div class="gh-stat-card"><i class="fas fa-code-branch"></i><span class="gh-num" data-target="12">0</span><span>Repositories</span></div>
+        <div class="gh-stat-card"><i class="fas fa-users"></i><span class="gh-num" data-target="8">0</span><span>Followers</span></div>
+        <div class="gh-stat-card"><i class="fas fa-fire"></i><span class="gh-num" data-target="145">0</span><span>Contributions</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       GITHUB LIVE REPOS
+  ══════════════════════════════════════ -->
+  <section id="github-repos">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2>Live <span class="accent">Repositories</span></h2>
+      <div class="header-line"></div>
+    </div>
+
+    <div class="gh-config-bar">
+      <div class="gh-input-wrap">
+        <i class="fab fa-github"></i>
+        <input type="text" id="gh-username-input" placeholder="Enter GitHub username…" value="Neelrana12"/>
+      </div>
+      <div class="gh-filter-row">
+        <button class="gh-filter-btn active" data-sort="updated">Recently Updated</button>
+        <button class="gh-filter-btn" data-sort="stars">Most Starred</button>
+        <button class="gh-filter-btn" data-sort="forks">Most Forked</button>
+        <button class="gh-filter-btn" data-sort="name">A → Z</button>
+      </div>
+      <button class="btn-primary gh-load-btn" id="gh-load-btn">
+        <i class="fas fa-terminal"></i> Load Repos
+      </button>
+    </div>
+
+    <div class="lang-filter-row" id="lang-filter-row"></div>
+
+    <div class="gh-status" id="gh-status">
+      <div class="gh-status-inner">
+        <div class="terminal-loader">
+          <span class="tl-prompt">$</span>
+          <span class="tl-cmd" id="tl-cmd">awaiting input…</span>
+          <span class="tl-blink">_</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="repo-grid" id="repo-grid"></div>
+    <div class="repo-pagination" id="repo-pagination"></div>
+
+    <p class="rate-note">
+      <i class="fas fa-info-circle"></i>
+      Uses the public GitHub REST API (unauthenticated: 60 req/hr).
+      Add a token via <code>GITHUB_TOKEN</code> in script.js to increase limits.
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════ -->
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <h2>Get In <span class="accent">Touch</span></h2>
+      <div class="header-line"></div>
+    </div>
+    <div class="contact-container">
+      <div class="contact-left">
+        <p class="contact-intro">Have a project in mind, a question about cybersecurity, or just want to connect? My inbox is always open.</p>
+        <div class="contact-methods">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-detail"><span class="label">Email</span><a href="mailto:neelrana126@gmail.com">neelrana126@gmail.com</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-detail"><span class="label">Phone</span><a href="tel:+919510331100">+91 9510331100</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-github"></i></div>
+            <div class="contact-detail"><span class="label">GitHub</span><a href="https://github.com/Neelrana12/Neelrana12" target="_blank">github.com/Neelrana12</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+            <div class="contact-detail"><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/neel-rana-06357a39a/" target="_blank">linkedin.com/in/neel-rana-06357a39a</a></div>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/Neelrana12/Neelrana12" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/neel-rana-06357a39a/" target="_blank" class="social-btn social-btn--linkedin"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="contact-right">
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-group"><label>Name</label><input type="text" placeholder="Your Name" required /></div>
+          <div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com" required /></div>
+          <div class="form-group"><label>Subject</label><input type="text" placeholder="Subject" required /></div>
+          <div class="form-group"><label>Message</label><textarea rows="4" placeholder="Your message…" required></textarea></div>
+          <button type="submit" class="btn-primary submit-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo"><span class="bracket">[</span>NR<span class="bracket">]</span></div>
+      <p>Designed &amp; Built by <span class="accent">Neel Rana</span></p>
+      <p class="footer-sub">BSc IT Student | Aspiring Cybersecurity Specialist</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
