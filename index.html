@@ -13,18 +13,16 @@
   <!-- MATRIX CANVAS BACKGROUND -->
   <canvas id="matrix-canvas"></canvas>
 
-  <!-- CUSTOM CURSOR -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-trail" id="cursor-trail"></div>
+  <!-- CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
 
   <!-- SCROLL PROGRESS -->
-  <div class="scroll-progress" id="scroll-progress"></div>
+  <div id="scroll-progress"></div>
 
   <!-- NAVBAR -->
   <nav id="navbar">
-    <div class="nav-logo">
-      <span class="bracket">[</span>NR<span class="bracket">]</span>
-    </div>
+    <div class="nav-logo"><span class="bracket">[</span>NR<span class="bracket">]</span></div>
     <ul class="nav-links">
       <li><a href="#hero">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -37,9 +35,7 @@
     <a href="https://www.linkedin.com/in/neel-rana-06357a39a/" target="_blank" class="nav-linkedin">
       <i class="fab fa-linkedin-in"></i> LinkedIn
     </a>
-    <div class="hamburger" id="hamburger">
-      <span></span><span></span><span></span>
-    </div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
   </nav>
 
   <!-- MOBILE MENU -->
@@ -56,18 +52,18 @@
     </ul>
   </div>
 
-  <!-- ══════════════════════════════════════
-       HERO
-  ══════════════════════════════════════ -->
+  <!-- ═══════════════════ HERO ═══════════════════ -->
   <section id="hero">
     <div class="hero-content">
 
-      <!-- PROFILE PHOTO CIRCLE -->
+      <!-- Profile Photo -->
       <div class="hero-photo-wrap">
         <div class="hero-photo-ring">
           <div class="hero-photo-circle">
             <img src="profile.jpg" alt="Neel Rana"
-              onerror="this.style.display='none';document.getElementById('profile-fallback').style.display='flex'"/>
+              onload="this.style.opacity='1'"
+              onerror="this.style.display='none';document.getElementById('profile-fallback').style.display='flex'"
+              style="opacity:0;transition:opacity .5s ease"/>
             <div class="profile-fallback" id="profile-fallback">
               <i class="fas fa-user-secret"></i>
             </div>
@@ -81,11 +77,9 @@
       </div>
 
       <div class="hero-tag">&lt; hello world /&gt;</div>
-      <h1 class="hero-name">
-        <span class="glitch" data-text="Neel Rana">Neel Rana</span>
-      </h1>
+      <h1 class="hero-name"><span class="glitch" data-text="Neel Rana">Neel Rana</span></h1>
       <div class="hero-title">
-        <span class="typed-text" id="typed"></span><span class="cursor-blink">_</span>
+        <span id="typed"></span><span class="cursor-blink">_</span>
       </div>
       <p class="hero-desc">
         Driven by curiosity, fueled by code. I explore the intersection of
@@ -125,9 +119,7 @@
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       ABOUT
-  ══════════════════════════════════════ -->
+  <!-- ═══════════════════ ABOUT ═══════════════════ -->
   <section id="about">
     <div class="section-header">
       <span class="section-num">01</span>
@@ -142,16 +134,9 @@
         <div class="status-badge"><span class="dot"></span> Available for Internship</div>
       </div>
       <div class="about-text">
-        <p class="about-intro">
-          Hey! I'm <span class="accent">Neel Rana</span>, a passionate BSc IT student
-          with a deep interest in cybersecurity, software engineering, and problem-solving.
-        </p>
-        <p>My journey began with C and C++, where I learned to think like a machine.
-          Today, I craft solutions across multiple languages and platforms — from
-          Python scripts to full web applications — always with security at the forefront of my mind.</p>
-        <p>I believe that in the digital age, <span class="accent">defense is as important as offense</span>.
-          I actively study ethical hacking, network security, and data protection
-          strategies to build a well-rounded understanding of the cyber landscape.</p>
+        <p class="about-intro">Hey! I'm <span class="accent">Neel Rana</span>, a passionate BSc IT student with a deep interest in cybersecurity, software engineering, and problem-solving.</p>
+        <p>My journey began with C and C++, where I learned to think like a machine. Today, I craft solutions across multiple languages and platforms — from Python scripts to full web applications — always with security at the forefront of my mind.</p>
+        <p>I believe that in the digital age, <span class="accent">defense is as important as offense</span>. I actively study ethical hacking, network security, and data protection strategies to build a well-rounded understanding of the cyber landscape.</p>
         <div class="about-cards">
           <div class="info-card"><i class="fas fa-graduation-cap"></i><div><strong>Education</strong><span>BSc Information Technology</span></div></div>
           <div class="info-card"><i class="fas fa-map-marker-alt"></i><div><strong>Location</strong><span>India</span></div></div>
@@ -162,9 +147,7 @@
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       SKILLS
-  ══════════════════════════════════════ -->
+  <!-- ═══════════════════ SKILLS ═══════════════════ -->
   <section id="skills">
     <div class="section-header">
       <span class="section-num">02</span>
@@ -196,9 +179,7 @@
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       PROJECTS
-  ══════════════════════════════════════ -->
+  <!-- ═══════════════════ PROJECTS ═══════════════════ -->
   <section id="projects">
     <div class="section-header">
       <span class="section-num">03</span>
@@ -236,9 +217,7 @@
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       GITHUB ACTIVITY
-  ══════════════════════════════════════ -->
+  <!-- ═══════════════════ GITHUB ACTIVITY ═══════════════════ -->
   <section id="github">
     <div class="section-header">
       <span class="section-num">04</span>
@@ -278,16 +257,13 @@
     </div>
   </section>
 
-  <!-- ══════════════════════════════════════
-       GITHUB LIVE REPOS
-  ══════════════════════════════════════ -->
+  <!-- ═══════════════════ GITHUB LIVE REPOS ═══════════════════ -->
   <section id="github-repos">
     <div class="section-header">
       <span class="section-num">05</span>
       <h2>Live <span class="accent">Repositories</span></h2>
       <div class="header-line"></div>
     </div>
-
     <div class="gh-config-bar">
       <div class="gh-input-wrap">
         <i class="fab fa-github"></i>
@@ -299,13 +275,9 @@
         <button class="gh-filter-btn" data-sort="forks">Most Forked</button>
         <button class="gh-filter-btn" data-sort="name">A → Z</button>
       </div>
-      <button class="btn-primary gh-load-btn" id="gh-load-btn">
-        <i class="fas fa-terminal"></i> Load Repos
-      </button>
+      <button class="btn-primary gh-load-btn" id="gh-load-btn"><i class="fas fa-terminal"></i> Load Repos</button>
     </div>
-
     <div class="lang-filter-row" id="lang-filter-row"></div>
-
     <div class="gh-status" id="gh-status">
       <div class="gh-status-inner">
         <div class="terminal-loader">
@@ -315,20 +287,12 @@
         </div>
       </div>
     </div>
-
     <div class="repo-grid" id="repo-grid"></div>
     <div class="repo-pagination" id="repo-pagination"></div>
-
-    <p class="rate-note">
-      <i class="fas fa-info-circle"></i>
-      Uses the public GitHub REST API (unauthenticated: 60 req/hr).
-      Add a token via <code>GITHUB_TOKEN</code> in script.js to increase limits.
-    </p>
+    <p class="rate-note"><i class="fas fa-info-circle"></i> Uses the public GitHub REST API (60 req/hr unauthenticated). Add a token via <code>GITHUB_TOKEN</code> in script.js to raise limits.</p>
   </section>
 
-  <!-- ══════════════════════════════════════
-       CONTACT
-  ══════════════════════════════════════ -->
+  <!-- ═══════════════════ CONTACT ═══════════════════ -->
   <section id="contact">
     <div class="section-header">
       <span class="section-num">06</span>
@@ -358,7 +322,7 @@
         </div>
         <div class="social-links">
           <a href="https://github.com/Neelrana12/Neelrana12" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/neel-rana-06357a39a/" target="_blank" class="social-btn social-btn--linkedin"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.linkedin.com/in/neel-rana-06357a39a/" target="_blank" class="social-btn social-linkedin"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
       <div class="contact-right">
